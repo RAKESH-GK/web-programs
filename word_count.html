@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<style>
+    .container{
+        width:100%;
+        height: 90vh;
+        padding-top: 100px;
+    }
+    .form{
+        margin: auto;
+        left: 0;
+        right: 0;
+        background-color: aqua;
+        height: 500px;
+        width: 500px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="form">
+            <br>
+            <h1>word count</h1>
+            <br>
+            <label for="">Enter text here Maximum input character 25</label><br><br>
+            <textarea maxlength="25" cols="45" rows="6"></textarea>
+            <br><label for=""><span class="count">25</span> letters remaining</label>
+            <br><br>
+            <input type="checkbox" id="accept">I accept
+            <br><br>
+            <button style="background-color: yellow;padding:5px;cursor: pointer;width: 100px;" disabled>submit</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            var max=25;
+            $('textarea').keyup(function(){
+                $('.count').text(max-$(this).val().length);
+            });
+            $('#accept').click(function(){
+                if ($('button').is(':disabled')){
+                    $('button').removeAttr('disabled');
+                }
+                else{
+                    $('button').attr('disabled','disabled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

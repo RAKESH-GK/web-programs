@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        color:white;
+        font-weight: 600;
+    }
+    .div1{
+        cursor: pointer;
+        margin: auto;
+        right: 0;
+        left: 10%;
+        top: 10%;
+        bottom: 0;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        z-index: 0;
+    }
+    .div2{
+        cursor: pointer;
+        margin: auto;
+        right: 0;
+        left: 20%;
+        top: 20%;
+        bottom: 0;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        z-index: 0;
+    }
+    .div3{
+        cursor: pointer;
+        margin: auto;
+        right: 0;
+        left: 30%;
+        top: 30%;
+        bottom: 0;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        z-index: 0;
+    }
+</style>
+<body>
+    <center>
+        <div class="container">
+            <div class="div1" onmouseover=fun(this,1)>Box red</div>
+            <div class="div2" onmouseover=fun(this,2)>Box Green</div>
+            <div class="div3" onmouseover=fun(this,3)>Box blue</div>
+        </div>
+    </center>
+    <script>
+        var val=0;
+        function fun(obj,i){
+            val=val+i;
+            obj.style.zIndex=val;
+        }
+    </script>
+</body>
+</html>

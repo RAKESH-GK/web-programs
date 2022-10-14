@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<body>
+    <div class="container"style="display:flex;float:left;width:100%;height:320px">
+        <div class="div1"style="background-color:red;width:33%;height:95%;margin:10px;"></div>
+        <div class="div2"style="background-color:blue;width:33%;height:95%;margin:10px;"></div>
+        <div class="div3"style="background-color:green;width:33%;height:95%;margin:10px;"></div>
+    </div>
+<center>
+    <button id="button1" style="padding:5px">fade toggle</button>    
+    <button id="button2" style="padding:5px">height animation</button>
+    <button id="button3" style="padding:5px">reset</button>
+</center>
+<script>
+    $(document).ready(function(){
+        $('#button1').click(function(){
+            $('.div1').fadeToggle();
+            $('.div2').fadeToggle('slow');
+            $('.div3').fadeToggle(3000);
+        });
+        $('#button2').click(function(){
+            $('.container').animate({height:"500px"},3000);
+        });
+        $('#button3').click(function(){
+            $('.container').animate({height:"320px"},3000);
+        });
+    })
+</script>
+</body>
+</html>

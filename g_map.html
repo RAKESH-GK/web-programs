@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <center>
+        <h1>Google map</h1>
+        <div id="mymap" style="width: 700px;height: 500px;"></div>
+    </center>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        var para={center:{lat:12.6757,lng:77.8789},zoom:8};
+        var map=new google.maps.Map(document.getElementById('mymap'),para);
+
+        position1={position:{lat:12.6757,lng:77.8789},map:map};
+        position2={position:{lat:12.7757,lng:78.8789},map:map};
+        new google.maps.Marker(position1);
+        new google.maps.Marker(position2);
+        
+    </script>
+</body>
+</html>

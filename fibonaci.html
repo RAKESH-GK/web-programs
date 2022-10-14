@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fibo()">fibonaci series</button>
+    <button onclick="sqr()">square root</button>
+</body>
+<script type="text/javascript">
+ function fibo(){
+    var n1=0,n2=1,next,i;
+    var a=prompt("enter the limit for fibonaci series:");
+    for(i=0;i<a;i++){
+        document.write(n1+" ");
+        next=n1+n2;
+        n1=n2;
+        n2=next;
+    }
+ }
+ function sqr(){
+    a=prompt("enter the number to get square root:");
+    document.write(Math.sqrt(a));
+ }
+</script>
+</html>
